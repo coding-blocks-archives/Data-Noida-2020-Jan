@@ -15,6 +15,11 @@ while True:
         print(faces)
 
         if len(faces) >= 2:
+
+            faces = sorted(faces, key=lambda item : item[2]*item[3], reverse=True)
+
+            # soft on base of face area
+
             face1 = faces[0]
             face2 = faces[1]
             x1, y1, w1, h1 = face1
